@@ -1,0 +1,23 @@
+
+
+@uri = http://localhost:3000/
+
+GET {{uri}}Products
+###
+POST {{uri}}Products
+Content-Type: application/json
+#这里必须空一行
+
+{
+    "title":"chanpin5"
+}
+
+###
+
+PUT {{uri}}Products/5cfc530b0c472370784ced1c
+Content-Type: application/json
+#这里必须空一行
+
+{
+    "title":"chanpin5"
+}
