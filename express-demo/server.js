@@ -61,9 +61,24 @@ app.post('/products', async function (req, res) {
 //修改数据
 app.put('/products/:id', async function (req, res) {
     const product = await Product.findById(req.params.id)
+    //获取请求过来的ID并且在数据库中找到对应ID
+
     product.title = req.body.title
+    //修改数据，这里改的是title
+
     await product.save()
+    // 新数据保存到数据库
+
     res.send(product)
+})
+
+// 删除数据
+app.delete('/products/:id',async function (req,res){
+    const product = await Product.findById(req.params.id)
+    await product.remove()
+    res.send({
+        success:'ture'
+    })
 })
 
 app.listen(3000, () => {

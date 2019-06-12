@@ -1,0 +1,23 @@
+@url=http://localhost:3033
+@json=Content-Type: application/json
+GET {{url}}/
+###
+POST {{url}}/register
+{{json}}
+
+{
+    "username":"use5",
+    "password":"123456"
+}
+###
+POST {{url}}/login
+{{json}}
+
+{
+    "username":"use5",
+    "password":"123456"
+}
+
+###
+get {{url}}/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkMDBiNGM4YTJkNmU1YTg1N2I0YTdhYiIsImlhdCI6MTU2MDMzMDYwOX0.b_sgFmCUjgB9EjCDZutbXbx-XRC3f3ZuPCQ801jpXvo

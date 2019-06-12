@@ -1,5 +1,6 @@
 
-
+###vscode安装rest-client,创建一个http结尾的文件，用来模拟发送各种请求
+# 变量
 @uri = http://localhost:3000/
 
 GET {{uri}}Products
@@ -13,7 +14,7 @@ Content-Type: application/json
 }
 
 ###
-
+###修改数据
 PUT {{uri}}Products/5cfc530b0c472370784ced1c
 Content-Type: application/json
 #这里必须空一行
@@ -21,3 +22,6 @@ Content-Type: application/json
 {
     "title":"chanpin5"
 }
+
+###删除
+DELETE {{uri}}Products/5cfc52fa0c472370784ced1b
